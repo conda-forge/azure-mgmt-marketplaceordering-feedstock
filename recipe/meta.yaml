@@ -1,5 +1,5 @@
 {% set name = "azure-mgmt-marketplaceordering" %}
-{% set version = "0.2.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: dc765cde7ec03efe456438c85c6207c2f77775a8ce8a7adb19b0df5c5dc513c2
-  
+  sha256: 85103080f9e59215036bdfb8f806d91ea182d72c46a13f55c3acc479849351e3
+
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Microsoft Azure Market Place Ordering Client Library for Python.'
+  summary: Microsoft Azure Market Place Ordering Client Library for Python.
 
 
 extra:
