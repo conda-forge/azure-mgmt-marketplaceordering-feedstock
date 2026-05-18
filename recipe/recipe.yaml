@@ -2,15 +2,15 @@ schema_version: 1
 
 context:
   name: azure-mgmt-marketplaceordering
-  version: 1.1.0
+  version: "1.1.1"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.zip
-  sha256: 68b381f52a4df4435dacad5a97e1c59ac4c981f667dcca8f9d04453417d60ad8
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 9c87db08b4ec0c6f738f5f07ba326b6ff92f348619f749573a55faba88c47285
 
 build:
   number: 0
